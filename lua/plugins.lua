@@ -20,27 +20,33 @@ require("lazy").setup({
 
   -- interface ui
   {
-     "folke/tokyonight.nvim",
-     lazy = false,
-     priority = 1000,
-     opts = {}
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {}
   },
 
   -- File explorer
   {
-     "stevearc/oil.nvim",
-     opts = {},
-     dependencies = { "nvim-tree/nvim-web-devicons" },
+    "stevearc/oil.nvim",
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
-  -- Telescope 
+  -- Telescope
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
-      dependencies = { 'nvim-lua/plenary.nvim' }
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.5',
+    dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-  { "elixir-tools/elixir-tools.nvim" }
+  -- languages
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  { "elixir-tools/elixir-tools.nvim" },
+
+  -- Auto complete
+  { 'hrsh7th/nvim-cmp' },
+  { 'hrsh7th/cmp-nvim-lsp'},
+  { 'L3MON4D3/LuaSnip' },
 
 })
-
